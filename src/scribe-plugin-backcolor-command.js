@@ -1,3 +1,5 @@
+import Element from 'scribe-common/src/element';
+
 export default function() {
     return function(scribe) {
         var backColorCommand = new scribe.api.Command('backColor');
@@ -13,15 +15,10 @@ export default function() {
                 clean(node);
 
                 if (node.attributes.length == 1 && !node.getAttribute('style')) {
-                    while (node.childNodes.length > 0) {
-                        root.insertBefore(node.firstChild, node);
-                    }
-                    root.removeChild(node);
+                    Element.unwrap(root, node);
                     i--;
                 }
             }
-
-            root.normalize();
         };
 
         backColorCommand.execute = function(color) {
