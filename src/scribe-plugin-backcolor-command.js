@@ -1,4 +1,4 @@
-import Element from 'scribe-common/src/element';
+import Element from 'element';
 
 export default function() {
     return function(scribe) {
