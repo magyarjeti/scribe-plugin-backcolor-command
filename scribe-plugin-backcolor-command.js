@@ -1,4 +1,4 @@
-define("scribe-plugin-backcolor-command", ['scribe-common/src/element'], function($__0) {
+define("scribe-plugin-backcolor-command", ['element'], function($__0) {
   "use strict";
   var __moduleName = "scribe-plugin-backcolor-command";
   if (!$__0 || !$__0.__esModule)
