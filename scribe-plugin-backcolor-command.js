@@ -1,9 +1,6 @@
-define("scribe-plugin-backcolor-command", ['element'], function($__0) {
+define("scribe-plugin-backcolor-command", [], function() {
   "use strict";
   var __moduleName = "scribe-plugin-backcolor-command";
-  if (!$__0 || !$__0.__esModule)
-    $__0 = {default: $__0};
-  var Element = $__0.default;
   var $__default = function() {
     return function(scribe) {
       var backColorCommand = new scribe.api.Command('backColor');
@@ -16,7 +13,7 @@ define("scribe-plugin-backcolor-command", ['element'], function($__0) {
           node.style.backgroundColor = "";
           clean(node);
           if (node.attributes.length == 1 && !node.getAttribute('style')) {
-            Element.unwrap(root, node);
+            scribe.node.unwrap(root, node);
             i--;
           }
         }
